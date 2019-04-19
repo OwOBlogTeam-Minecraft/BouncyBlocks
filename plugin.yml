@@ -1,0 +1,35 @@
+name: BouncyBlocks
+main: Darunia18\BouncyBlocks\BouncyBlocks
+version: "1.0.5"
+api: 
+- 1.9.0
+- 3.3.0
+- 3.3.1
+- 3.5.0
+- 3.5.2
+author: ["Darunia18", "Teaclon"]
+# description: Bounce on any block as if it were a trampoline.
+description: 在你自己定义的方块上欢乐的跳蹦~
+load: POSTWORLD
+website: https://github.com/Darunia18/BouncyBlocks
+
+commands:
+    bounce:
+        # description: Enales or disables bouncing for the sender
+        description: 开启或关闭你自己的蹦床功能
+        usage:  /bounce <on|off>
+        aliases: ["蹦床"]
+    bblock:
+        description: 添加或删除一个方块进行跳蹦
+        usage:  /bblock <blockId>
+        permission: bounceblockmanager.command
+        aliases: ["蹦床"]
+        
+permissions:
+    bounceblockmanager:
+        description: NO_DESCRIPTION
+        default: op
+        children:
+            bounceblockmanager.command:
+                description: 添加或删除一个方块进行跳蹦
+                default: op
